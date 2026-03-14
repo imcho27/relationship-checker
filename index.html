@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UK Spouse Visa Relationship Evidence Checker — KQ Solicitors. Assess your relationship evidence strength under Appendix FM." />
+  <title>Relationship Evidence Checker | KQ Solicitors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-name">KQ Solicitors</span>
+        <span class="brand-divider">|</span>
+        <span class="brand-tagline">Immigration Law</span>
+      </div>
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        SRA Regulated
+      </div>
+    </div>
+  </header>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar-wrap" id="progressWrap" aria-hidden="true">
+    <div class="progress-bar-inner">
+      <div class="progress-steps" id="progressSteps">
+        <span class="progress-step" data-step="1">Quick Check</span>
+        <span class="progress-step" data-step="2">Relationship Basics</span>
+        <span class="progress-step" data-step="3">Your Situation</span>
+        <span class="progress-step" data-step="4">Evidence Check</span>
+        <span class="progress-step" data-step="5">Immigration History</span>
+        <span class="progress-step" data-step="6">Review</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">Step 1 of 6</div>
+    </div>
+  </div>
+
+  <main class="main-wrap" id="mainWrap">
+
+    <!-- INTRO PAGE -->
+    <section class="screen active" id="screen-intro" aria-label="Introduction">
+      <div class="card card--intro">
+        <div class="intro-eyebrow">
+          <span class="eyebrow-tag">Appendix FM</span>
+          <span class="eyebrow-tag">Free Assessment</span>
+          <span class="eyebrow-tag">5 Minutes</span>
+        </div>
+        <h1 class="intro-title">UK Spouse Visa<br>Relationship Evidence<br><span class="title-accent">Checker</span></h1>
+        <p class="intro-lead">Understand the strength of your relationship evidence before applying for a UK spouse or partner visa.</p>
+        <div class="intro-reassurance">
+          <p>Many successful spouse visa applications contain moderate indicators. This assessment helps identify where additional evidence may strengthen your case.</p>
+        </div>
+        <div class="intro-features">
+          <div class="feature-item">✓ Based on official Home Office caseworker guidance (October 2024)</div>
+          <div class="feature-item">✓ Covers cohabiting and long-distance relationships equally</div>
+          <div class="feature-item">✓ Personalised evidence recommendations at the end</div>
+          <div class="feature-item">✓ Culturally aware — no assumptions about your relationship</div>
+        </div>
+        <button class="btn btn--primary btn--large" onclick="startTool()">Start My Assessment →</button>
+        <p class="intro-time">Approximately 5 minutes to complete</p>
+      </div>
+    </section>
+
+    <!-- STEP 1 — QUICK CHECK -->
+    <section class="screen" id="screen-step1" aria-label="Quick Check">
+      <div class="card">
+        <div class="step-header">
+          <div class="step-number">01</div>
+          <div class="step-meta">
+            <h2 class="step-title">Quick Check</h2>
+            <p class="step-why">Five short questions to confirm your application can proceed. Answer honestly — there are no right or wrong answers.</p>
+          </div>
+        </div>
+
+        <!-- Q1 -->
+        <div class="question-block">
+          <label class="question-label">Have you and Your Partner Physically Met in Person?</label>
+          <div class="question-why">Video calls and online communication do not count. You must have been physically in the same place at the same time at least once.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q1_met" value="yes" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — we have met in person</span>
+            </label>
+            <label class="radio-option radio-option--risk">
+              <input type="radio" name="q1_met" value="no" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No — we have not met in person</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-block">
+          <label class="question-label">Are Both You and Your Partner Aged 18 or Over?</label>
+          <div class="question-why">Both people must be 18 or over on the date of application. This is a fixed legal requirement.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q1_age" value="yes" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — both of us are 18 or over</span>
+            </label>
+            <label class="radio-option radio-option--risk">
+              <input type="radio" name="q1_age" value="no" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No — one or both of us is under 18</span>
+            </label>
+          </div>
+        </div>
+
+       <!-- Q3 — MERGED MARRIAGE QUESTION -->
+<div class="question-block">
+  <label class="question-label">Were either of you previously married or in a civil partnership?</label>
+  <div class="question-why">England and Wales: decree absolute (before April 2022) or final order (April 2022 onwards). Scotland: decree of divorce. Northern Ireland: Decree Absolute or Final Order. Or a death certificate if your previous partner passed away.</div>
+  <div class="radio-group">
+    <label class="radio-option">
+      <input type="radio" name="q1_prev_marriage" value="no" onchange="onFieldChange()" />
+      <span class="radio-custom"></span>
+      <span class="radio-label">No — neither of us has been previously married or in a civil partnership</span>
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="q1_prev_marriage" value="yes_doc" onchange="onFieldChange()" />
+      <span class="radio-custom"></span>
+      <span class="radio-label">Yes — and we have the correct dissolution document</span>
+    </label>
+    <label class="radio-option radio-option--risk">
+      <input type="radio" name="q1_prev_marriage" value="yes_nodoc" onchange="onFieldChange()" />
+      <span class="radio-custom"></span>
+      <span class="radio-label">Yes — but we do not have the correct document</span>
+    </label>
+  </div>
+</div>
+
+        <!-- Q5 -->
+        <div class="question-block">
+          <label class="question-label">Are you and your partner closely related by blood or adoption?</label>
+          <div class="question-why">UK law does not permit marriage between close relatives. This includes parent and child, siblings (including half-siblings), grandparent and grandchild, aunt or uncle and nephew or niece, and adoptive parent and child. Step-siblings are not included.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q1_related" value="no" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No — we are not closely related</span>
+            </label>
+            <label class="radio-option radio-option--risk">
+              <input type="radio" name="q1_related" value="yes" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — we are related in one of the ways described</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn--secondary" disabled>Back</button>
+          <button class="btn btn--primary" id="next-step1" onclick="goNext(1)" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 2 — RELATIONSHIP BASICS -->
+    <section class="screen" id="screen-step2" aria-label="Relationship Basics">
+      <div class="card">
+        <div class="step-header">
+          <div class="step-number">02</div>
+          <div class="step-meta">
+            <h2 class="step-title">Relationship Basics</h2>
+            <p class="step-why">Tell us about your relationship. The Home Office looks at the nature and history of your relationship to understand whether it is genuine and continuing.</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question-block">
+          <label class="question-label">What best describes your relationship?</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q2_type" value="married" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Married</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_type" value="civil" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Civil partnership</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_type" value="unmarried_2plus" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Unmarried couple — together for 2 years or more</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_type" value="unmarried_less2" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Unmarried couple — together for less than 2 years</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="question-block">
+          <label class="question-label">How long have you been together?</label>
+          <div class="question-why">This is how long you have been in a relationship, not necessarily how long you have lived together.</div>
+          <div class="select-wrap">
+            <select name="q2_duration" onchange="onFieldChange()">
+              <option value="">— Please select —</option>
+              <option value="under6">Under 6 months</option>
+              <option value="6to12">6 to 12 months</option>
+              <option value="1to2">1 to 2 years</option>
+              <option value="2plus">2 years or more</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Q8 — PATH DETECTION -->
+        <div class="question-block">
+          <label class="question-label">Do you currently live together at the same address?</label>
+          <div class="question-why">Both cohabiting and long-distance relationships are valid under the Immigration Rules. Your answer simply determines which evidence questions are most relevant to you.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q2_living" value="yes" onchange="onPathDetect()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — we live together</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_living" value="no" onchange="onPathDetect()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No — we live apart</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q9 — PATH B ONLY -->
+        <div class="question-block question-block--conditional" id="q2-apart-wrap" hidden>
+          <label class="question-label">What is the main reason you are not living together?</label>
+          <div class="question-why">The Home Office understands that couples are sometimes apart for genuine reasons. Knowing the reason helps us assess your evidence correctly.</div>
+          <div class="select-wrap">
+            <select name="q2_apart_reason" onchange="onFieldChange()">
+              <option value="">— Please select —</option>
+              <option value="work_study">Work or study in a different country or city</option>
+              <option value="cultural">Cultural or religious reasons</option>
+              <option value="family_care">Caring for a family member</option>
+              <option value="immigration">Waiting for immigration permission</option>
+              <option value="other">Other reason</option>
+            </select>
+          </div>
+        </div>
+
+         <!-- Q11 -->
+        <div class="question-block">
+          <label class="question-label">Do you have children together?</label>
+          <div class="question-why">Children's birth certificates are classified as strong evidence by the Home Office.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q2_children" value="yes_cert" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — and we have birth certificates</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_children" value="yes_nocert" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — but we do not have birth certificates</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_children" value="no" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q12 — CONTEXT ONLY, NOT SCORED -->
+        <div class="question-block">
+          <label class="question-label">Is your relationship a same-sex relationship? <span class="optional-tag">(Optional)</span></label>
+          <div class="question-why">This does not affect your score. We ask this only to show you relevant guidance if it applies to your situation.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q2_samesex" value="yes" onchange="onSameSexCheck()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_samesex" value="no" onchange="onSameSexCheck()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_samesex" value="prefer_not" onchange="onSameSexCheck()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Prefer not to say</span>
+            </label>
+          </div>
+          <div class="info-box info-box--blue" id="samesex-note" hidden>
+            UK immigration law recognises same-sex relationships equally. In some countries same-sex couples cannot openly cohabit. The Home Office recognises this and you will not be penalised for lack of cohabitation evidence where this applies.
+          </div>
+        </div>
+
+        <!-- Q13 -->
+        <div class="question-block">
+          <label class="question-label">Have you previously been granted a UK visa as this person's partner?</label>
+          <div class="question-why">If yes, the Home Office already accepted your relationship as genuine. This application focuses on whether your relationship is still ongoing.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q2_prev_visa" value="yes" onchange="onPrevVisaCheck()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — I have a previous UK partner visa</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2_prev_visa" value="no" onchange="onPrevVisaCheck()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No — this is my first application</span>
+            </label>
+          </div>
+          <div class="info-box info-box--green" id="prev-visa-note" hidden>
+            Good news — you do not need to re-prove the genuineness of your relationship from scratch. Focus your evidence on showing the relationship is still active and ongoing.
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn--secondary" onclick="goBack()">Back</button>
+          <button class="btn btn--primary" id="next-step2" onclick="goNext(2)" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3 — YOUR SITUATION -->
+    <section class="screen" id="screen-step3" aria-label="Your Situation">
+      <div class="card">
+        <div class="step-header">
+          <div class="step-number">03</div>
+          <div class="step-meta">
+            <h2 class="step-title">Your Situation</h2>
+            <p class="step-why">Most applicants answer No to all of these. If any do apply to you, most issues can be resolved with the right advice and documentation. Answer as accurately as you can.</p>
+          </div>
+        </div>
+
+        <!-- PATH A — LIVING TOGETHER -->
+        <div id="path-a-questions">
+          <div class="path-label path-label--a">You said you live together — these questions apply to you</div>
+
+          <div class="question-block">
+            <label class="question-label">Do you have official documents showing you both live at the same address?</label>
+            <div class="question-why">Tick all that apply. The more you have the stronger your evidence.</div>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_docs" value="tenancy" onchange="onCheckboxChange('q3a_docs')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Tenancy agreement or mortgage document</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_docs" value="council_tax" onchange="onCheckboxChange('q3a_docs')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Council tax bill</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_docs" value="utility" onchange="onCheckboxChange('q3a_docs')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Utility bills (electricity, gas, water)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_docs" value="official_letters" onchange="onCheckboxChange('q3a_docs')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Official letters (GP, HMRC, DWP, driving licence)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_docs" value="none" onchange="onCheckboxChange('q3a_docs')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">None of the above</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <label class="question-label">How long have you lived together at your current or most recent shared address?</label>
+            <div class="question-why">This is specifically about sharing the same home — not the total length of your relationship.</div>
+            <div class="select-wrap">
+              <select name="q3a_duration" onchange="onFieldChange()">
+                <option value="">— Please select —</option>
+                <option value="under6">Under 6 months</option>
+                <option value="6to12">6 to 12 months</option>
+                <option value="1to2">1 to 2 years</option>
+                <option value="2plus">2 years or more</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <label class="question-label">Do you have financial evidence linking you as a couple?</label>
+            <div class="question-why">This shows the Home Office that your lives are genuinely joined together. Tick all that apply.</div>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_finance" value="joint_account" onchange="onCheckboxChange('q3a_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Joint bank account</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_finance" value="bank_statements" onchange="onCheckboxChange('q3a_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Bank statements (individual but showing same address)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_finance" value="shared_bills" onchange="onCheckboxChange('q3a_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Shared bills or financial commitments</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3a_finance" value="none" onchange="onCheckboxChange('q3a_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">None of the above</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PATH B — LIVING APART -->
+        <div id="path-b-questions" hidden>
+          <div class="path-label path-label--b">You said you live apart — these questions apply to you</div>
+
+          <div class="question-block">
+            <label class="question-label">Do you have a document proving why you are living apart?</label>
+            <div class="question-why">Examples: employment contract, university enrolment letter, medical certificate. This is important — it shows the separation is temporary and genuine.</div>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="q3b_reason_doc" value="yes" onchange="onFieldChange()" />
+                <span class="radio-custom"></span>
+                <span class="radio-label">Yes — I have a document explaining the separation</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="q3b_reason_doc" value="no" onchange="onFieldChange()" />
+                <span class="radio-custom"></span>
+                <span class="radio-label">No</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <label class="question-label">Have you ever lived together at any point in this relationship?</label>
+            <div class="select-wrap">
+              <select name="q3b_prev_cohab" onchange="onFieldChange()">
+                <option value="">— Please select —</option>
+                <option value="yes_long">Yes — for more than 1 year</option>
+                <option value="yes_short">Yes — for less than 1 year</option>
+                <option value="no">No — we have never lived together</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <label class="question-label">Do you have financial evidence showing you support each other?</label>
+            <div class="question-why">Money transfers and bank transactions showing regular financial support are classified as strong evidence by the Home Office for long-distance couples.</div>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3b_finance" value="transfers" onchange="onCheckboxChange('q3b_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Regular money transfers or bank transactions</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3b_finance" value="joint_account" onchange="onCheckboxChange('q3b_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Joint bank account</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3b_finance" value="shared_commitments" onchange="onCheckboxChange('q3b_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">Shared financial commitments</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q3b_finance" value="none" onchange="onCheckboxChange('q3b_finance')" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-label">None of the above</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- CULTURAL NOTE — ALL USERS -->
+        <div class="info-box info-box--amber">
+          <strong>Cultural note:</strong> In some cultures women are not routinely named on official documents such as bills or tenancy agreements. The Home Office recognises this and accepts alternative evidence. You will not be penalised for this.
+        </div>
+
+        <div class="question-block">
+          <label class="question-label">Does this apply to your situation?</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q3_cultural" value="yes" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes — women in our household are not typically named on official documents</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q3_cultural" value="no" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No — this does not apply to us</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn--secondary" onclick="goBack()">Back</button>
+          <button class="btn btn--primary" id="next-step3" onclick="goNext(3)" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 4 — EVIDENCE CHECK -->
+    <section class="screen" id="screen-step4" aria-label="Evidence Check">
+      <div class="card">
+        <div class="step-header">
+          <div class="step-number">04</div>
+          <div class="step-meta">
+            <h2 class="step-title">Evidence Check</h2>
+            <p class="step-why">These questions apply to all couples. Evidence of visits, communication, and shared life helps the Home Office see your relationship is real and ongoing.</p>
+          </div>
+        </div>
+
+        <!-- Q18 — MERGED TRAVEL -->
+        <div class="question-block">
+          <label class="question-label">Do you have travel evidence showing visits between you?</label>
+          <div class="question-why">This includes flight tickets, train tickets, boarding passes, visa stamps, or holiday bookings. Tick all that apply.</div>
+          <div class="checkbox-group">
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_travel" value="tickets" onchange="onCheckboxChange('q4_travel')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Flight tickets, boarding passes, or train tickets</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_travel" value="bookings" onchange="onCheckboxChange('q4_travel')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Holiday or travel bookings together</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_travel" value="stamps" onchange="onCheckboxChange('q4_travel')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Passport stamps or visa records showing visits</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_travel" value="none" onchange="onCheckboxChange('q4_travel')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">None of the above</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q19 -->
+        <div class="question-block">
+          <label class="question-label">Do you have photographs together from different points in your relationship?</label>
+          <div class="question-why">Photographs are weak evidence on their own but add credibility when combined with stronger documents. Dated photos from different periods are more useful than undated ones.</div>
+          <div class="select-wrap">
+            <select name="q4_photos" onchange="onFieldChange()">
+              <option value="">— Please select —</option>
+              <option value="dated">Yes — dated photographs from different periods and places</option>
+              <option value="undated">Yes — photographs but they are not dated</option>
+              <option value="no">No photographs</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Q20 — MERGED COMMUNICATION -->
+        <div class="question-block">
+          <label class="question-label">Do you have evidence of regular communication during any time you were apart?</label>
+          <div class="question-why">This shows the relationship continued during periods of separation. Tick all that apply.</div>
+          <div class="checkbox-group">
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_comms" value="call_logs" onchange="onCheckboxChange('q4_comms')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Call logs or message records</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_comms" value="transcripts" onchange="onCheckboxChange('q4_comms')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Certified transcripts of communication</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_comms" value="letters" onchange="onCheckboxChange('q4_comms')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Letters of support from family, friends, or community leaders</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="q4_comms" value="none" onchange="onCheckboxChange('q4_comms')" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">None of the above</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q21 -->
+        <div class="question-block">
+          <label class="question-label">How often do you communicate when apart?</label>
+          <div class="select-wrap">
+            <select name="q4_comms_freq" onchange="onFieldChange()">
+              <option value="">— Please select —</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Several times a week</option>
+              <option value="monthly">Weekly or less</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn--secondary" onclick="goBack()">Back</button>
+          <button class="btn btn--primary" id="next-step4" onclick="goNext(4)" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 5 — IMMIGRATION HISTORY -->
+    <section class="screen" id="screen-step5" aria-label="Immigration History">
+      <div class="card">
+        <div class="step-header">
+          <div class="step-number">05</div>
+          <div class="step-meta">
+            <h2 class="step-title">Immigration History</h2>
+            <p class="step-why">Your immigration history is checked by the Home Office. Answer accurately — most issues can be addressed with the right evidence and explanation.</p>
+          </div>
+        </div>
+
+        <div class="info-box info-box--green" style="margin-bottom: 1.5rem;">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+  <p>These questions are standard on all UK visa applications. A previous issue does not automatically prevent an application — what matters is how it is addressed.</p>
+</div>
+
+<!-- Q22 -->
+<div class="question-block">
+  <label class="question-label">Have you ever stayed in the UK beyond your visa expiry date?</label>
+  <div class="question-why">Overstaying is a risk factor but is not automatically fatal. There are legal exceptions and a documented reason can significantly help your case.</div>
+  <div class="select-wrap">
+    <select name="q5_overstay" onchange="onFieldChange()">
+      <option value="">— Please select —</option>
+      <option value="no">No — I have never overstayed</option>
+      <option value="yes_reason">Yes — and I have a documented reason</option>
+      <option value="yes_no_reason">Yes — but I do not have a documented reason</option>
+    </select>
+  </div>
+</div>
+
+        <!-- Q23 -->
+        <div class="question-block">
+          <label class="question-label">Have you ever been refused a UK visa?</label>
+          <div class="select-wrap">
+            <select name="q5_refusal" onchange="onRefusalCheck()">
+              <option value="">— Please select —</option>
+              <option value="no">No — never refused</option>
+              <option value="standard">Yes — refused but not for dishonesty or deception</option>
+              <option value="deception">Yes — the refusal involved dishonesty or false information</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Q24 -->
+        <div class="question-block">
+          <label class="question-label">Have you ever been removed or deported from the UK?</label>
+          <div class="select-wrap">
+            <select name="q5_deported" onchange="onDeportationCheck()">
+              <option value="">— Please select —</option>
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="high-risk-flag" id="deportation-flag" hidden>
+          <strong>Important — High Risk</strong>
+          <p>A previous removal or deportation order is a serious matter. However this does not automatically prevent an application — exceptions exist under Article 8 family life rights. Your assessment will continue but will show this as a high risk factor. We strongly recommend speaking to a solicitor before applying.</p>
+        </div>
+
+        <!-- Q25 -->
+        <div class="question-block">
+          <label class="question-label">Do you have any unspent criminal convictions?</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q5_convictions" value="no" onchange="onFieldChange()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">No</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q5_convictions" value="yes" onchange="onConvictionCheck()" />
+              <span class="radio-custom"></span>
+              <span class="radio-label">Yes</span>
+            </label>
+          </div>
+          <div class="info-box info-box--amber" id="conviction-note" hidden>
+            Criminal convictions can affect an application on suitability grounds. We strongly recommend getting professional legal advice before applying.
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn btn--secondary" onclick="goBack()">Back</button>
+          <button class="btn btn--primary" id="next-step5" onclick="goNext(5)" disabled>Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 6 — REVIEW -->
+    <section class="screen" id="screen-step6" aria-label="Review Your Answers">
+      <div class="card">
+        <div class="step-header">
+          <div class="step-number">06</div>
+          <div class="step-meta">
+            <h2 class="step-title">Review Your Answers</h2>
+            <p class="step-why">Check everything looks correct. You can go back and change any answer before we generate your assessment.</p>
+          </div>
+        </div>
+        <div class="review-list" id="reviewList"></div>
+        <div class="step-nav">
+          <button class="btn btn--secondary" onclick="goBack()">Back</button>
+          <button class="btn btn--primary btn--large" onclick="goToLeadCapture()">Generate My Assessment →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD CAPTURE -->
+    <section class="screen" id="screen-lead" aria-label="Save your results">
+      <div class="card card--lead">
+        <h2 class="lead-title">Your assessment is ready</h2>
+        <p class="lead-copy">Enter your details to receive your full report by email. This is completely optional.</p>
+        <div class="form-group">
+          <label class="form-label" for="lead_name">First name</label>
+          <input type="text" id="lead_name" class="form-input" placeholder="Your first name" autocomplete="given-name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lead_email">Email address</label>
+          <input type="email" id="lead_email" class="form-input" placeholder="your@email.com" autocomplete="email" />
+        </div>
+        <p class="gdpr-note">Your details will only be used to send your report and will not be shared with third parties.</p>
+        <button class="btn btn--primary btn--large btn--full" onclick="submitLead()">Send My Report &amp; View Results →</button>
+        <button class="btn btn--ghost btn--full" onclick="skipLead()">View my results without saving</button>
+      </div>
+    </section>
+
+    <!-- RESULTS PAGE -->
+    <section class="screen" id="screen-results" aria-label="Your Assessment Results">
+      <div class="results-wrap">
+        <div class="results-header">
+          <h2 class="results-title">Relationship Evidence Assessment</h2>
+          <p class="results-subtitle">Based on Home Office Appendix FM caseworker guidance (October 2024)</p>
+        </div>
+        <div class="score-card" id="scoreCard">
+          <div class="score-label">Overall Score</div>
+          <div class="score-number" id="scoreNumber">0<span>/100</span></div>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track">
+              <div class="score-bar-fill" id="scoreBarFill"></div>
+            </div>
+          </div>
+          <div class="score-status" id="scoreStatus"></div>
+          <p class="score-note">Home Office caseworkers assess on the balance of probabilities. Many successful applications contain moderate indicators.</p>
+        </div>
+
+        <!-- Risk vs Evidence Split -->
+        <div class="results-section">
+          <h3 class="results-section-title">Score Breakdown</h3>
+          <div class="risk-split" id="riskSplit">
+            <div class="risk-item" id="evidenceScore">
+              <div class="risk-label">Relationship Evidence</div>
+              <div class="risk-bar-wrap">
+                <div class="risk-bar-fill" id="evidenceBarFill"></div>
+              </div>
+              <div class="risk-status" id="evidenceStatus"></div>
+            </div>
+            <div class="risk-item" id="complianceScore">
+              <div class="risk-label">Immigration Compliance</div>
+              <div class="risk-bar-wrap">
+                <div class="risk-bar-fill" id="complianceBarFill"></div>
+              </div>
+              <div class="risk-status" id="complianceStatus"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-section">
+          <h3 class="results-section-title">Category Breakdown</h3>
+          <div class="category-list" id="categoryList"></div>
+        </div>
+        <div class="results-section" id="improvementsSection">
+          <h3 class="results-section-title">Areas to Strengthen</h3>
+          <div id="improvementsList"></div>
+        </div>
+        <div class="results-section">
+          <h3 class="results-section-title">Recommended Documents</h3>
+          <p class="results-section-intro">Strong evidence listed first. Multiple weaker items combined can also satisfy the requirement.</p>
+          <div id="docsList"></div>
+        </div>
+        <div class="results-section" id="guidanceSection">
+          <h3 class="results-section-title">Personalised Guidance</h3>
+          <div id="guidanceList"></div>
+        </div>
+        <div class="info-box info-box--blue" id="interviewNote" hidden>
+          A Home Office caseworker may contact you to request further evidence before making a decision. In some cases an interview may be arranged. This is normal and does not mean your application will be refused.
+        </div>
+        <div class="financial-banner">
+          This tool assesses relationship evidence only. <a href="#">Check your financial requirement separately →</a>
+        </div>
+        <div class="cta-section">
+          <div class="cta-card">
+            <h3 class="cta-title">Need help with your application?</h3>
+            <p class="cta-copy">Speak to a UK immigration solicitor at KQ Solicitors. We specialise in spouse and partner visa applications.</p>
+            <div class="cta-buttons">
+              <a href="#" class="btn btn--primary btn--large">Book a Consultation →</a>
+              <button class="btn btn--secondary" onclick="emailResults()">Email My Results</button>
+              <button class="btn btn--ghost" onclick="copyResults()">Copy Summary</button>
+            </div>
+          </div>
+        </div>
+        <div class="results-disclaimer">
+          Assessment based on information provided. Home Office decision-makers retain full discretion in every case. Cases involving previous refusals, overstaying, criminal convictions, or complex circumstances should always seek professional legal representation before applying.
+        </div>
+      </div>
+    </section>
+
+    <!-- HARD STOP -->
+    <section class="screen" id="screen-hardstop" aria-label="Important">
+      <div class="card card--hardstop">
+        <h2 class="hardstop-title" id="hardstopTitle">Important — Please Read</h2>
+        <p class="hardstop-message" id="hardstopMessage"></p>
+        <div class="hardstop-disclaimer">
+          This is general guidance only and does not constitute legal advice. Please consult a qualified UK immigration solicitor before taking any action.
+        </div>
+        <div class="hardstop-actions">
+          <a href="#" class="btn btn--primary btn--large">Book Urgent Consultation →</a>
+          <button class="btn btn--ghost" onclick="restartTool()">Start Again</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="save-indicator" id="saveIndicator"></div>
+
+  <div class="modal-overlay" id="timeoutModal" hidden>
+    <div class="modal-card">
+      <h2 class="modal-title">Still there?</h2>
+      <p>Your session will expire in 5 minutes. Your progress has been saved.</p>
+      <button class="btn btn--primary" onclick="dismissTimeout()">Continue My Assessment</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-disclaimer">This tool provides general guidance based on Appendix FM of the UK Immigration Rules and Home Office caseworker guidance. It does not constitute legal advice. Immigration law changes frequently. For advice tailored to your circumstances please contact KQ Solicitors directly.</p>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> KQ Solicitors. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
